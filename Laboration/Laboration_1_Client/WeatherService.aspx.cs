@@ -26,13 +26,13 @@ namespace Laboration_1_Client
 
         protected void AddTwoNumbersResult_button_Click(object sender, EventArgs e)
         {
-            AddTwoNumbersService.AddTwoNumbersServiceSoapClient client = new AddTwoNumbersServiceSoapClient();
+            var client = new AddTwoNumbersServiceSoapClient();
             AddTwoNumbersLabelResult.Text = client.AddTwoNumbers(inputX_2.Text, inputY_2.Text);
         }
 
         protected void AddThreeNumbersButton_Click(object sender, EventArgs e)
         {
-          AddThreeNumbersService.AddThreeNumbersServiceSoapClient client = new AddThreeNumbersServiceSoapClient();
+          var client = new AddThreeNumbersServiceSoapClient();
             AddThreeNumbersLabelResult.Text = client.AddThreeNumbers(inputX_3.Text, inputY_3.Text, inputZ_3.Text);
         }
     }
