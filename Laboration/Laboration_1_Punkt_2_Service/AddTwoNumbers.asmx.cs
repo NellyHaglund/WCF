@@ -14,13 +14,13 @@ namespace Laboration_1_Punkt_2_Service
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
-    public class AddTwoNumbers : System.Web.Services.WebService
+    public class AddTwoNumbersService : System.Web.Services.WebService
     {
 
         [WebMethod]
-        public string HelloWorld()
+        public float AddTwoNumbers(float x, float y)
         {
-            return "Hello World";
+            return x + y;
         }
     }
 }
