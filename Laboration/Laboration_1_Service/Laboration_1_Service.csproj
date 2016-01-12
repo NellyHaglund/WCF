@@ -75,10 +75,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="WeatherService.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeatherService.asmx.cs">
+      <DependentUpon>WeatherService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -18,9 +18,12 @@ namespace Laboration_1_Service
     {
 
         [WebMethod]
-        public string HelloWorld()
+        public string GenerateWeather()
         {
-            return "Hello World";
+            var random = new Random();
+            var weathers = new List<string>() {"Soligt", "Soligt med delvis molnighet", "Regn, en jävla massa regn", "Nu snöar det", "Det är grått ute"};
+
+            return weathers[random.Next(weathers.Count)];
         }
     }
 }

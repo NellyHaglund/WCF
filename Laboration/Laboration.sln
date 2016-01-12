@@ -5,6 +5,13 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboration_1_Service", "Laboration_1_Service\Laboration_1_Service.csproj", "{4B7757C3-C31E-4377-9120-9F36E4957F47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboration_1_Client", "Laboration_1_Client\Laboration_1_Client.csproj", "{A86219C4-B557-4646-9403-601A58AF4A41}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4B7757C3-C31E-4377-9120-9F36E4957F47} = {4B7757C3-C31E-4377-9120-9F36E4957F47}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Laboration 1 - punkt 1", "Laboration 1 - punkt 1", "{C2083911-DA9C-42FF-9BD9-7FB2C4626484}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +22,16 @@ Global
 		{4B7757C3-C31E-4377-9120-9F36E4957F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B7757C3-C31E-4377-9120-9F36E4957F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B7757C3-C31E-4377-9120-9F36E4957F47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A86219C4-B557-4646-9403-601A58AF4A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86219C4-B557-4646-9403-601A58AF4A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A86219C4-B557-4646-9403-601A58AF4A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A86219C4-B557-4646-9403-601A58AF4A41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B7757C3-C31E-4377-9120-9F36E4957F47} = {C2083911-DA9C-42FF-9BD9-7FB2C4626484}
+		{A86219C4-B557-4646-9403-601A58AF4A41} = {C2083911-DA9C-42FF-9BD9-7FB2C4626484}
 	EndGlobalSection
 EndGlobal
