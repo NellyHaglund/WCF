@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SubtractTwoNumbers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="x" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="y" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubtractTwoNumbersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubtractTwoNumbersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SubtractTwoNumbersSoapIn">
+    <wsdl:part name="parameters" element="tns:SubtractTwoNumbers" />
+  </wsdl:message>
+  <wsdl:message name="SubtractTwoNumbersSoapOut">
+    <wsdl:part name="parameters" element="tns:SubtractTwoNumbersResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SubtractTwoNumbersServiceSoap">
+    <wsdl:operation name="SubtractTwoNumbers">
+      <wsdl:input message="tns:SubtractTwoNumbersSoapIn" />
+      <wsdl:output message="tns:SubtractTwoNumbersSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SubtractTwoNumbersServiceSoap" type="tns:SubtractTwoNumbersServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SubtractTwoNumbers">
+      <soap:operation soapAction="http://tempuri.org/SubtractTwoNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SubtractTwoNumbersServiceSoap12" type="tns:SubtractTwoNumbersServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SubtractTwoNumbers">
+      <soap12:operation soapAction="http://tempuri.org/SubtractTwoNumbers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SubtractTwoNumbersService">
+    <wsdl:port name="SubtractTwoNumbersServiceSoap" binding="tns:SubtractTwoNumbersServiceSoap">
+      <soap:address location="http://localhost:15808/SubtractTwoNumbersService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SubtractTwoNumbersServiceSoap12" binding="tns:SubtractTwoNumbersServiceSoap12">
+      <soap12:address location="http://localhost:15808/SubtractTwoNumbersService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

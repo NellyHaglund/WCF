@@ -35,5 +35,10 @@ namespace Laboration_1_Client
           var client = new AddThreeNumbersServiceSoapClient();
             AddThreeNumbersLabelResult.Text = client.AddThreeNumbers(inputX_3.Text, inputY_3.Text, inputZ_3.Text);
         }
+
+        protected void SubtractTwoNumbersButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

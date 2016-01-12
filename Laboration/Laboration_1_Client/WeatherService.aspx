@@ -31,7 +31,7 @@
         <asp:TextBox ID="inputX_4" runat="server"></asp:TextBox>
         -<asp:TextBox ID="inputY_4" runat="server"></asp:TextBox>
         =<asp:Label ID="SubtractTwoNumbersResult" runat="server"></asp:Label>
-        <asp:Button ID="SubtractTwoNumbersButton" runat="server" Text="Give me the result" />
+        <asp:Button ID="SubtractTwoNumbersButton" runat="server" OnClick="SubtractTwoNumbersButton_Click" Text="Give me the result" />
     </div>
     </form>
 </body>
