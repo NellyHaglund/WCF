@@ -235,9 +235,20 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\NameDayService\Laboration_1_Client.NameDayService.DateOfNameDayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\NameDayService\NameDay.disco" />
+    <None Include="Service References\NameDayService\configuration91.svcinfo" />
+    <None Include="Service References\NameDayService\configuration.svcinfo" />
+    <None Include="Service References\NameDayService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\SubtractTwoNumbersService\Laboration_1_Client.SubtractTwoNumbersService.SubtractTwoNumbersResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\NameDayService\NameDay.wsdl" />
     <None Include="Service References\SubtractTwoNumbersService\SubtractTwoNumbersService.disco" />
     <None Include="Service References\SubtractTwoNumbersService\configuration91.svcinfo" />
     <None Include="Service References\SubtractTwoNumbersService\configuration.svcinfo" />
@@ -420,6 +431,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\NameDayService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\SubtractTwoNumbersService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -469,6 +485,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\AddThreeNumbersService\" />
     <WCFMetadataStorage Include="Service References\AddTwoNumbersService\" />
+    <WCFMetadataStorage Include="Service References\NameDayService\" />
     <WCFMetadataStorage Include="Service References\SubtractTwoNumbersService\" />
     <WCFMetadataStorage Include="Service References\WeatherGenerator\" />
   </ItemGroup>

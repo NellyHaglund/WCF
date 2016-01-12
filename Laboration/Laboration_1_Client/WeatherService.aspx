@@ -31,7 +31,11 @@
         <asp:TextBox ID="inputX_4" runat="server"></asp:TextBox>
         -<asp:TextBox ID="inputY_4" runat="server"></asp:TextBox>
         =<asp:Label ID="SubtractTwoNumbersResult" runat="server"></asp:Label>
-        <asp:Button ID="SubtractTwoNumbersButton" runat="server" OnClick="SubtractTwoNumbersButton_Click" Text="Give me the result" />
+        <asp:Button ID="SubtractTwoNumbersButton" runat="server" OnClick="SubtractTwoNumbersButton_Click" Text="Give me the result" />      <br />
+        #5Enter name to find out which date that name has nameday: 
+        <asp:TextBox ID="input_name" runat="server"></asp:TextBox>
+        <asp:Label ID="nameDay_result" runat="server"></asp:Label>
+        <asp:Button ID="nameDay_button" runat="server" Text="Give me the result" OnClick="nameDay_button_Click" />
     </div>
     </form>
 </body>
