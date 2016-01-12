@@ -19,9 +19,8 @@ namespace Laboration_1_Client
 
         protected void generateWeather_Click(object sender, EventArgs e)
         {
-            WeatherGenerator.WeatherServiceSoapClient client = new WeatherServiceSoapClient();
+            var client = new WeatherServiceSoapClient();
             weatherResult.Text = client.GenerateWeather();
-
         }
 
         protected void AddTwoNumbersResult_button_Click(object sender, EventArgs e)
