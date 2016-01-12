@@ -235,10 +235,21 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\SubtractTwoNumbersService\Laboration_1_Client.SubtractTwoNumbersService.SubtractTwoNumbersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\SubtractTwoNumbersService\SubtractTwoNumbersService.disco" />
+    <None Include="Service References\SubtractTwoNumbersService\configuration91.svcinfo" />
+    <None Include="Service References\SubtractTwoNumbersService\configuration.svcinfo" />
+    <None Include="Service References\SubtractTwoNumbersService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\WeatherGenerator\Laboration_1_Client.WeatherGenerator.GenerateWeatherResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Service References\AddTwoNumbersService\AddTwoNumbers.wsdl" />
+    <None Include="Service References\SubtractTwoNumbersService\SubtractTwoNumbersService.wsdl" />
     <None Include="Service References\WeatherGenerator\WeatherService.disco" />
     <None Include="Service References\WeatherGenerator\configuration91.svcinfo" />
     <None Include="Service References\WeatherGenerator\configuration.svcinfo" />
@@ -409,6 +420,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\SubtractTwoNumbersService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\WeatherGenerator\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -453,7 +469,14 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\AddThreeNumbersService\" />
     <WCFMetadataStorage Include="Service References\AddTwoNumbersService\" />
+    <WCFMetadataStorage Include="Service References\SubtractTwoNumbersService\" />
     <WCFMetadataStorage Include="Service References\WeatherGenerator\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Laboration_1_Punkt_4_Service\Laboration_1_Punkt_4_Service.csproj">
+      <Project>{CABCF10A-664A-4456-A859-8A7D2C246642}</Project>
+      <Name>Laboration_1_Punkt_4_Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

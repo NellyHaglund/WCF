@@ -38,7 +38,8 @@ namespace Laboration_1_Client
 
         protected void SubtractTwoNumbersButton_Click(object sender, EventArgs e)
         {
-
+            var client = new Laboration_1_Punkt_4_Service.SubtractTwoNumbersService();
+            SubtractTwoNumbersResult.Text = client.SubtractTwoNumbers(inputX_4.Text, inputY_4.Text);
         }
     }
 }
