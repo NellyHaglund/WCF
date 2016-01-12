@@ -15,11 +15,84 @@ namespace Laboration_1_Client.AddTwoNumbersService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AddTwoNumbersService.AddTwoNumbersServiceSoap")]
     public interface AddTwoNumbersServiceSoap {
         
+        // CODEGEN: Generating message contract since element name x from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddTwoNumbers", ReplyAction="*")]
-        float AddTwoNumbers(float x, float y);
+        Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersResponse AddTwoNumbers(Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddTwoNumbers", ReplyAction="*")]
-        System.Threading.Tasks.Task<float> AddTwoNumbersAsync(float x, float y);
+        System.Threading.Tasks.Task<Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersResponse> AddTwoNumbersAsync(Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddTwoNumbersRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddTwoNumbers", Namespace="http://tempuri.org/", Order=0)]
+        public Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersRequestBody Body;
+        
+        public AddTwoNumbersRequest() {
+        }
+        
+        public AddTwoNumbersRequest(Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddTwoNumbersRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string x;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string y;
+        
+        public AddTwoNumbersRequestBody() {
+        }
+        
+        public AddTwoNumbersRequestBody(string x, string y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddTwoNumbersResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddTwoNumbersResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersResponseBody Body;
+        
+        public AddTwoNumbersResponse() {
+        }
+        
+        public AddTwoNumbersResponse(Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddTwoNumbersResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string AddTwoNumbersResult;
+        
+        public AddTwoNumbersResponseBody() {
+        }
+        
+        public AddTwoNumbersResponseBody(string AddTwoNumbersResult) {
+            this.AddTwoNumbersResult = AddTwoNumbersResult;
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +122,31 @@ namespace Laboration_1_Client.AddTwoNumbersService {
                 base(binding, remoteAddress) {
         }
         
-        public float AddTwoNumbers(float x, float y) {
-            return base.Channel.AddTwoNumbers(x, y);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersResponse Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersServiceSoap.AddTwoNumbers(Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersRequest request) {
+            return base.Channel.AddTwoNumbers(request);
         }
         
-        public System.Threading.Tasks.Task<float> AddTwoNumbersAsync(float x, float y) {
-            return base.Channel.AddTwoNumbersAsync(x, y);
+        public string AddTwoNumbers(string x, string y) {
+            Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersRequest inValue = new Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersRequest();
+            inValue.Body = new Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersRequestBody();
+            inValue.Body.x = x;
+            inValue.Body.y = y;
+            Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersResponse retVal = ((Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersServiceSoap)(this)).AddTwoNumbers(inValue);
+            return retVal.Body.AddTwoNumbersResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersResponse> Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersServiceSoap.AddTwoNumbersAsync(Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersRequest request) {
+            return base.Channel.AddTwoNumbersAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersResponse> AddTwoNumbersAsync(string x, string y) {
+            Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersRequest inValue = new Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersRequest();
+            inValue.Body = new Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersRequestBody();
+            inValue.Body.x = x;
+            inValue.Body.y = y;
+            return ((Laboration_1_Client.AddTwoNumbersService.AddTwoNumbersServiceSoap)(this)).AddTwoNumbersAsync(inValue);
         }
     }
 }

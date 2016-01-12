@@ -18,9 +18,9 @@ namespace Laboration_1_Punkt_2_Service
     {
 
         [WebMethod]
-        public float AddTwoNumbers(float x, float y)
+        public string AddTwoNumbers(string x, string y)
         {
-            return x + y;
+            return (float.Parse(x) + float.Parse(y)).ToString();
         }
     }
 }
