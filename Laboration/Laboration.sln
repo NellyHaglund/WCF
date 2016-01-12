@@ -32,6 +32,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Laboration 1 - punkt 5", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboration_1_punkt_5_Service", "Laboration_1_punkt_5_Service\Laboration_1_punkt_5_Service.csproj", "{D10E49ED-0A8B-4477-998D-042794FA9936}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Laboration 1 - punkt 6", "Laboration 1 - punkt 6", "{79E31ED9-C61D-4ED4-ADB7-8A04825F060F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LundsBorgmastareService", "LundsBorgmastareService\LundsBorgmastareService.csproj", "{0B8AE10D-8F71-4927-A6FC-39A81560C2F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +66,10 @@ Global
 		{D10E49ED-0A8B-4477-998D-042794FA9936}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D10E49ED-0A8B-4477-998D-042794FA9936}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D10E49ED-0A8B-4477-998D-042794FA9936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B8AE10D-8F71-4927-A6FC-39A81560C2F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B8AE10D-8F71-4927-A6FC-39A81560C2F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B8AE10D-8F71-4927-A6FC-39A81560C2F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B8AE10D-8F71-4927-A6FC-39A81560C2F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,5 +80,6 @@ Global
 		{EA6EAF1D-0DF3-47C9-9DE7-C5297F24468A} = {9D2900C0-10C4-4017-853D-4AF09C828AB9}
 		{CABCF10A-664A-4456-A859-8A7D2C246642} = {FAE3F3F8-E999-450B-9877-7D65D80EC0E7}
 		{D10E49ED-0A8B-4477-998D-042794FA9936} = {A9802E3E-7EA0-44DA-ABC0-680F829A3597}
+		{0B8AE10D-8F71-4927-A6FC-39A81560C2F4} = {79E31ED9-C61D-4ED4-ADB7-8A04825F060F}
 	EndGlobalSection
 EndGlobal
