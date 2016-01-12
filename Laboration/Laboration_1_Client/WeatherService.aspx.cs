@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Laboration_1_Client.AddThreeNumbersService;
 using Laboration_1_Client.AddTwoNumbersService;
 using Laboration_1_Client.WeatherGenerator;
 
@@ -31,7 +32,8 @@ namespace Laboration_1_Client
 
         protected void AddThreeNumbersButton_Click(object sender, EventArgs e)
         {
-
+          AddThreeNumbersService.AddThreeNumbersServiceSoapClient client = new AddThreeNumbersServiceSoapClient();
+            AddThreeNumbersLabelResult.Text = client.AddThreeNumbers(inputX_3.Text, inputY_3.Text, inputZ_3.Text);
         }
     }
 }
