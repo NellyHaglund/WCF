@@ -22,12 +22,22 @@ namespace Laboration_1_punkt_5_Service
         [WebMethod]
         public string DateOfNameDay(string name)
         {
-            var day = new DateTime().Day;
-            var month = new DateTime().Month;
             var data = File
-                .ReadAllLines(@"C:\Users\NellyHaglund\Documents\Skolan\WCF\Laborationer\WCF_Github\WCF\Laboration\Laboration_1_punkt_5_Service\namesAndDays\NameDays");
-
-            return "";
+                .ReadAllLines(@"C:\Users\NellyHaglund\Documents\Skolan\WCF\Laborationer\WCF_Github\WCF\Laboration\Laboration_1_punkt_5_Service\namesAndDays\NameDays.txt");
+            var dateList = new Dictionary<string, DateTime>();
+            var count = 0;
+            foreach (var d in data)
+            {
+                if (d != "--")
+                {
+                    var items = d.Split(';');
+                    dateList.Add(items[1], new DateTime(DateTime.Now.Year, count, int.Parse(items[0])));
+                }
+                else
+                    count++;
+            }
+            var result = dateList.FirstOrDefault(x => x.Key == name).Value;
+            return result.Year == 0001 ? (name + ": Not Found") : (name + " has nameday at: " + result.ToShortDateString());
         }
     }
 }
