@@ -58,22 +58,22 @@ namespace Laboration_1_Client {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// inputX control.
+        /// inputX_2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inputX;
+        protected global::System.Web.UI.WebControls.TextBox inputX_2;
         
         /// <summary>
-        /// inputY control.
+        /// inputY_2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inputY;
+        protected global::System.Web.UI.WebControls.TextBox inputY_2;
         
         /// <summary>
         /// AddTwoNumbersLabelResult control.
@@ -92,5 +92,50 @@ namespace Laboration_1_Client {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button AddTwoNumbersResult_button;
+        
+        /// <summary>
+        /// inputX_3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox inputX_3;
+        
+        /// <summary>
+        /// inputY_3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox inputY_3;
+        
+        /// <summary>
+        /// inputZ_3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox inputZ_3;
+        
+        /// <summary>
+        /// AddThreeNumbersLabelResult control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AddThreeNumbersLabelResult;
+        
+        /// <summary>
+        /// AddThreeNumbersButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddThreeNumbersButton;
     }
 }

@@ -26,7 +26,12 @@ namespace Laboration_1_Client
         protected void AddTwoNumbersResult_button_Click(object sender, EventArgs e)
         {
             AddTwoNumbersService.AddTwoNumbersServiceSoapClient client = new AddTwoNumbersServiceSoapClient();
-            AddTwoNumbersLabelResult.Text = client.AddTwoNumbers(inputX.Text, inputY.Text);
+            AddTwoNumbersLabelResult.Text = client.AddTwoNumbers(inputX_2.Text, inputY_2.Text);
+        }
+
+        protected void AddThreeNumbersButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

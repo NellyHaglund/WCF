@@ -15,10 +15,17 @@
         <br />
         <asp:Label ID="Label2" runat="server" Text="#2"></asp:Label>
         What numbers do you want to add?
-        <asp:TextBox ID="inputX" runat="server"></asp:TextBox>
-        +<asp:TextBox ID="inputY" runat="server"></asp:TextBox>
-        <asp:Label ID="AddTwoNumbersLabelResult" runat="server"></asp:Label>
+        <asp:TextBox ID="inputX_2" runat="server"></asp:TextBox>
+        +<asp:TextBox ID="inputY_2" runat="server"></asp:TextBox>
+        =<asp:Label ID="AddTwoNumbersLabelResult" runat="server"></asp:Label>
         <asp:Button ID="AddTwoNumbersResult_button" runat="server" OnClick="AddTwoNumbersResult_button_Click" Text="Give me the result" />
+        <br />
+        #3What numbers do you want to add?
+        <asp:TextBox ID="inputX_3" runat="server"></asp:TextBox>
+        +<asp:TextBox ID="inputY_3" runat="server"></asp:TextBox>
+        +<asp:TextBox ID="inputZ_3" runat="server"></asp:TextBox>
+        =<asp:Label ID="AddThreeNumbersLabelResult" runat="server"></asp:Label>
+        <asp:Button ID="AddThreeNumbersButton" runat="server" OnClick="AddThreeNumbersButton_Click" Text="Give me the result" />
     </div>
     </form>
 </body>
