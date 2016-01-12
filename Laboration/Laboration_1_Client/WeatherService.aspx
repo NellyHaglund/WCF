@@ -26,6 +26,12 @@
         +<asp:TextBox ID="inputZ_3" runat="server"></asp:TextBox>
         =<asp:Label ID="AddThreeNumbersLabelResult" runat="server"></asp:Label>
         <asp:Button ID="AddThreeNumbersButton" runat="server" OnClick="AddThreeNumbersButton_Click" Text="Give me the result" />
+        <br />
+        #4What numbers do you want to subtract?
+        <asp:TextBox ID="inputX_4" runat="server"></asp:TextBox>
+        -<asp:TextBox ID="inputY_4" runat="server"></asp:TextBox>
+        =<asp:Label ID="SubtractTwoNumbersResult" runat="server"></asp:Label>
+        <asp:Button ID="SubtractTwoNumbersButton" runat="server" Text="Give me the result" />
     </div>
     </form>
 </body>
