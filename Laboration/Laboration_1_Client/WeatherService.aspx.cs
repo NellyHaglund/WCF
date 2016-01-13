@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Laboration_1_Client.AddThreeNumbersService;
 using Laboration_1_Client.AddTwoNumbersService;
+using Laboration_1_Client.IndiasVicePresidentsService;
 using Laboration_1_Client.LundsMayorService;
 using Laboration_1_Client.NameDayService;
 using Laboration_1_Client.WeatherGenerator;
@@ -57,7 +58,8 @@ namespace Laboration_1_Client
 
         protected void india_button_Click(object sender, EventArgs e)
         {
-
+            var client = new IndiaVicePresidentServiceSoapClient();
+            india_result.Text = client.IndiaVicePresidentGivenYear(inputIndia_year.Text);
         }
     }
 }

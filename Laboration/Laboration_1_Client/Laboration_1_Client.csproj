@@ -235,9 +235,20 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\IndiasVicePresidentsService\IndiaVicePresidentService.disco" />
+    <None Include="Service References\IndiasVicePresidentsService\configuration91.svcinfo" />
+    <None Include="Service References\IndiasVicePresidentsService\configuration.svcinfo" />
+    <Content Include="Service References\IndiasVicePresidentsService\Laboration_1_Client.IndiasVicePresidentsService.IndiaVicePresidentGivenYearResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\IndiasVicePresidentsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\LundsMayorService\Laboration_1_Client.LundsMayorService.ReturnMayorForSpecificYearResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\IndiasVicePresidentsService\IndiaVicePresidentService.wsdl" />
     <None Include="Service References\LundsMayorService\LundsBorgmastareService.disco" />
     <None Include="Service References\LundsMayorService\configuration91.svcinfo" />
     <None Include="Service References\LundsMayorService\configuration.svcinfo" />
@@ -442,6 +453,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\IndiasVicePresidentsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\LundsMayorService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -501,6 +517,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\AddThreeNumbersService\" />
     <WCFMetadataStorage Include="Service References\AddTwoNumbersService\" />
+    <WCFMetadataStorage Include="Service References\IndiasVicePresidentsService\" />
     <WCFMetadataStorage Include="Service References\LundsMayorService\" />
     <WCFMetadataStorage Include="Service References\NameDayService\" />
     <WCFMetadataStorage Include="Service References\SubtractTwoNumbersService\" />
