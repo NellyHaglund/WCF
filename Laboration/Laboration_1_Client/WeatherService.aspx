@@ -36,6 +36,11 @@
         <asp:TextBox ID="input_name" runat="server"></asp:TextBox>
         <asp:Label ID="nameDay_result" runat="server"></asp:Label>
         <asp:Button ID="nameDay_button" runat="server" Text="Give me the result" OnClick="nameDay_button_Click" />
+        <br />
+        #5Enter a year to find our who was mayor in Lund back then: 
+        <asp:TextBox ID="input_year" runat="server"></asp:TextBox>
+        <asp:Label ID="mayor_result" runat="server"></asp:Label>
+        <asp:Button ID="mayor_button" runat="server" Text="Give me the result" OnClick="mayor_button_Click" />
     </div>
     </form>
 </body>
