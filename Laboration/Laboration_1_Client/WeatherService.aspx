@@ -45,7 +45,7 @@
         #6.2Enter a year to find our who was Vice President in India:
         <asp:TextBox ID="inputIndia_year" runat="server"></asp:TextBox>
         <asp:Label ID="india_result" runat="server"></asp:Label>
-        <asp:Button ID="india_button" runat="server" Text="Give me the result" />
+        <asp:Button ID="india_button" runat="server" Text="Give me the result" OnClick="india_button_Click" />
     </div>
     </form>
 </body>

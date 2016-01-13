@@ -54,5 +54,10 @@ namespace Laboration_1_Client
             var client = new LundsBorgmastareServiceSoapClient();
             mayor_result.Text = client.ReturnMayorForSpecificYear(input_year.Text);
         }
+
+        protected void india_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
