@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Laboration_1_Client.AddThreeNumbersService;
 using Laboration_1_Client.AddTwoNumbersService;
+using Laboration_1_Client.LundsMayorService;
 using Laboration_1_Client.NameDayService;
 using Laboration_1_Client.WeatherGenerator;
 
@@ -46,6 +47,12 @@ namespace Laboration_1_Client
         {
             var client = new NameDaySoapClient();
             nameDay_result.Text = client.DateOfNameDay(input_name.Text);
+        }
+
+        protected void mayor_button_Click(object sender, EventArgs e)
+        {
+            var client = new LundsBorgmastareServiceSoapClient();
+            mayor_result.Text = client.ReturnMayorForSpecificYear(input_year.Text);
         }
     }
 }
