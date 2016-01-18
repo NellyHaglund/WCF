@@ -17,7 +17,7 @@ namespace Ecutbildning.Laboration2Service
     public interface IYearCalculator
     {
         [OperationContract]
-        int CalculateAgeIntoYears(DateTime date);
+        int CalculateAgeIntoDays(DateTime date);
     }
 
     [ServiceContract(Namespace = "http://Ecutbildning.Laboration2Service")]
@@ -43,7 +43,7 @@ namespace Ecutbildning.Laboration2Service
             return bmi;
         }
 
-        public int CalculateAgeIntoYears(DateTime date)
+        public int CalculateAgeIntoDays(DateTime date)
         {
            return ((DateTime.Now.Year - date.Year) * 372 + (DateTime.Now.Month - date.Month) * 31 + (DateTime.Now.Day - date.Day)) / 372;
         }
