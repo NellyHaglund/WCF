@@ -35,7 +35,7 @@ namespace Ecutbildning.Laboration2Service
     }
 
 
-    public class BMICalculatorService : IBMICalculator, IYearCalculator
+    public class BMICalculatorService : IBMICalculator, IYearCalculator, INext1000DaysCalculator, IHobby
     {
         public float CalculateBMI(float weight, float height)
         {
@@ -43,6 +43,16 @@ namespace Ecutbildning.Laboration2Service
         }
 
         public float CalculateAgeIntoYears(DateTime date)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string CalculateNext1000Days(DateTime date)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string AmIStrong(string input)
         {
             throw new NotImplementedException();
         }
