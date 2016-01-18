@@ -39,7 +39,8 @@ namespace Ecutbildning.Laboration2Service
     {
         public float CalculateBMI(float weight, float height)
         {
-            return weight / (weight * height);
+            var bmi = weight / (height * height);
+            return bmi;
         }
 
         public float CalculateAgeIntoYears(DateTime date)
