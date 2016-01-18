@@ -15,14 +15,15 @@ namespace Laboration2Host
         {
             Uri baseAddress = new Uri("http://localhost:8080/Ecutbildning.Laboration2Service");
 
-            ServiceHost selfServiceHost = new ServiceHost(typeof(LaborationService));
+            ServiceHost selfServiceHost = new ServiceHost(typeof(LaborationService), baseAddress);
 
             try
             {
-                selfServiceHost.AddServiceEndpoint(typeof(IBMICalculator), new WSHttpBinding(), "LaborationService");
-                selfServiceHost.AddServiceEndpoint(typeof(IHobby), new WSHttpBinding(), "LaborationService");
-                selfServiceHost.AddServiceEndpoint(typeof(INext1000DaysCalculator), new WSHttpBinding(), "LaborationService");
-                selfServiceHost.AddServiceEndpoint(typeof(IYearCalculator), new WSHttpBinding(), "LaborationService");
+                var binding = new WSHttpBinding();
+                selfServiceHost.AddServiceEndpoint(typeof(IBMICalculator), binding, "LaborationService");
+                selfServiceHost.AddServiceEndpoint(typeof(IHobby), binding, "LaborationService");
+                selfServiceHost.AddServiceEndpoint(typeof(INext1000DaysCalculator), binding, "LaborationService");
+                selfServiceHost.AddServiceEndpoint(typeof(IYearCalculator), binding, "LaborationService");
 
                 ServiceMetadataBehavior smBehavior = new ServiceMetadataBehavior();
                 smBehavior.HttpGetEnabled = true;
