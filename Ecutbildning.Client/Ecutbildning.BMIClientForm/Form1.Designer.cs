@@ -58,6 +58,7 @@
             this.buttonCalc.TabIndex = 2;
             this.buttonCalc.Text = "Calculate";
             this.buttonCalc.UseVisualStyleBackColor = true;
+            this.buttonCalc.Click += new System.EventHandler(this.buttonCalc_Click);
             // 
             // labelResult
             // 

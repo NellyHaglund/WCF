@@ -16,5 +16,11 @@ namespace Ecutbildning.BMIClientForm
         {
             InitializeComponent();
         }
+
+        private void buttonCalc_Click(object sender, EventArgs e)
+        {
+            BMICalculatorClient host = new BMICalculatorClient();
+            labelResult.Text += host.CalculateBMI(float.Parse(textBoxWeight.Text), float.Parse(textBoxHeight.Text));
+        }
     }
 }
