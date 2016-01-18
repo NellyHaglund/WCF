@@ -190,13 +190,13 @@ public partial class Next1000DaysCalculatorClient : System.ServiceModel.ClientBa
 public interface IYearCalculator
 {
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://Ecutbildning.Laboration2Service/IYearCalculator/CalculateAgeIntoYears", ReplyAction="http://Ecutbildning.Laboration2Service/IYearCalculator/CalculateAgeIntoYearsRespo" +
+    [System.ServiceModel.OperationContractAttribute(Action="http://Ecutbildning.Laboration2Service/IYearCalculator/CalculateAgeIntoDays", ReplyAction="http://Ecutbildning.Laboration2Service/IYearCalculator/CalculateAgeIntoDaysRespo" +
         "nse")]
-    float CalculateAgeIntoYears(System.DateTime date);
+    float CalculateAgeIntoDays(System.DateTime date);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://Ecutbildning.Laboration2Service/IYearCalculator/CalculateAgeIntoYears", ReplyAction="http://Ecutbildning.Laboration2Service/IYearCalculator/CalculateAgeIntoYearsRespo" +
+    [System.ServiceModel.OperationContractAttribute(Action="http://Ecutbildning.Laboration2Service/IYearCalculator/CalculateAgeIntoDays", ReplyAction="http://Ecutbildning.Laboration2Service/IYearCalculator/CalculateAgeIntoDaysRespo" +
         "nse")]
-    System.Threading.Tasks.Task<float> CalculateAgeIntoYearsAsync(System.DateTime date);
+    System.Threading.Tasks.Task<float> CalculateAgeIntoDaysAsync(System.DateTime date);
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -233,13 +233,13 @@ public partial class YearCalculatorClient : System.ServiceModel.ClientBase<IYear
     {
     }
     
-    public float CalculateAgeIntoYears(System.DateTime date)
+    public float CalculateAgeIntoDays(System.DateTime date)
     {
-        return base.Channel.CalculateAgeIntoYears(date);
+        return base.Channel.CalculateAgeIntoDays(date);
     }
     
-    public System.Threading.Tasks.Task<float> CalculateAgeIntoYearsAsync(System.DateTime date)
+    public System.Threading.Tasks.Task<float> CalculateAgeIntoDaysAsync(System.DateTime date)
     {
-        return base.Channel.CalculateAgeIntoYearsAsync(date);
+        return base.Channel.CalculateAgeIntoDaysAsync(date);
     }
 }

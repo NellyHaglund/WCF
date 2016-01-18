@@ -77,6 +77,7 @@
             this.buttonResult.TabIndex = 4;
             this.buttonResult.Text = "How many days old am I?";
             this.buttonResult.UseVisualStyleBackColor = true;
+            this.buttonResult.Click += new System.EventHandler(this.buttonResult_Click);
             // 
             // labelResult
             // 
