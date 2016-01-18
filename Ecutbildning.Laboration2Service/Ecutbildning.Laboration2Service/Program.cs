@@ -35,7 +35,7 @@ namespace Ecutbildning.Laboration2Service
     }
 
 
-    public class BMICalculatorService : IBMICalculator, IYearCalculator, INext1000DaysCalculator, IHobby
+    public class LaborationService : IBMICalculator, IYearCalculator, INext1000DaysCalculator, IHobby
     {
         public float CalculateBMI(float weight, float height)
         {
