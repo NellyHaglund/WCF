@@ -15,11 +15,11 @@ namespace Laboration2Host
         {
             Uri baseAddress = new Uri("http://localhost:8080/Ecutbildning.Laboration2Service");
             
-            ServiceHost selfServiceHost = new ServiceHost(typeof(LaborationService));
+            ServiceHost selfServiceHost = new ServiceHost(typeof(BMICalculatorService));
 
             try
             {
-                selfServiceHost.AddServiceEndpoint(typeof (ILaboration), new WSHttpBinding(), "LaborationService");
+                selfServiceHost.AddServiceEndpoint(typeof (IBMICalculator), new WSHttpBinding(), "LaborationService");
 
                 ServiceMetadataBehavior smBehavior = new ServiceMetadataBehavior();
                 smBehavior.HttpGetEnabled = true;

@@ -8,23 +8,51 @@ using System.Threading.Tasks;
 namespace Ecutbildning.Laboration2Service
 {
     [ServiceContract(Namespace = "http://Ecutbildning.Laboration2Service")]
-    public interface ILaboration
+    public interface IBMICalculator
     {
+        [OperationContract]
         float CalculateBMI(float weight, float height);
     }
+    [ServiceContract(Namespace = "http://Ecutbildning.Laboration2Service")]
+    public interface IYearCalculator
+    {
+        [OperationContract]
+        float CalculateAgeIntoYears(DateTime date);
+    }
 
-    public class LaborationService : ILaboration
+    [ServiceContract(Namespace = "http://Ecutbildning.Laboration2Service")]
+    public interface INext1000DaysCalculator
+    {
+        [OperationContract]
+        string CalculateNext1000Days(DateTime date);
+    }
+
+    [ServiceContract(Namespace = "http://Ecutbildning.Laboration2Service")]
+    public interface IHobby
+    {
+        [OperationContract]
+        string AmIStrong(string input);
+    }
+
+
+    public class BMICalculatorService : IBMICalculator, IYearCalculator
     {
         public float CalculateBMI(float weight, float height)
         {
-            return weight/(weight*height);
+            return weight / (weight * height);
+        }
+
+        public float CalculateAgeIntoYears(DateTime date)
+        {
+            throw new NotImplementedException();
         }
     }
+
     class Program
     {
         static void Main(string[] args)
         {
-         
+
         }
     }
 }
