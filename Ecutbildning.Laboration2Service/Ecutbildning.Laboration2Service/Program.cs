@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 namespace Ecutbildning.Laboration2Service
 {
     [ServiceContract(Namespace = "http://Ecutbildning.Laboration2Service")]
-    public interface IBMICalculator
+    public interface ILaboration
     {
         float CalculateBMI(float weight, float height);
     }
 
-    public class BMICalculatorService : IBMICalculator
+    public class LaborationService : ILaboration
     {
         public float CalculateBMI(float weight, float height)
         {
