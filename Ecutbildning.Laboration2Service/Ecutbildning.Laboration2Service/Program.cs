@@ -47,7 +47,12 @@ namespace Ecutbildning.Laboration2Service
 
         public string CalculateNext1000Days(DateTime date)
         {
-            throw new NotImplementedException();
+
+            var timeSpan = DateTime.Now - date;
+            var modulo = (timeSpan.Days % 1000);
+            var result = 1000 - modulo;
+
+            return result.ToString();
         }
 
         public int CalculateBirthDateIntoYears(DateTime date)
