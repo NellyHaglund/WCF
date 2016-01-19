@@ -24,6 +24,7 @@ namespace Ecutbildning.HobbyForm
             var gender = textBoxGender.Text;
             var input = kilos + ";" + gender;
             labelResult.Text = host.AmIStrong(input);
+            
         }
     }
 }
