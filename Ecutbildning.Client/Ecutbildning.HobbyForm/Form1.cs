@@ -16,5 +16,14 @@ namespace Ecutbildning.HobbyForm
         {
             InitializeComponent();
         }
+
+        private void buttonResult_Click(object sender, EventArgs e)
+        {
+            var host = new HobbyClient();
+            var kilos = textBoxKilo.Text;
+            var gender = textBoxGender.Text;
+            var input = kilos + ";" + gender;
+            labelResult.Text = host.AmIStrong(input);
+        }
     }
 }

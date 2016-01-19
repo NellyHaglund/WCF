@@ -86,6 +86,7 @@
             this.buttonResult.TabIndex = 5;
             this.buttonResult.Text = "ÄR JAG STARK?";
             this.buttonResult.UseVisualStyleBackColor = true;
+            this.buttonResult.Click += new System.EventHandler(this.buttonResult_Click);
             // 
             // labelResult
             // 
