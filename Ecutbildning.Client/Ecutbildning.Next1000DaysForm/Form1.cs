@@ -18,8 +18,7 @@ namespace Ecutbildning.Next1000DaysForm
         }
 
         private void buttonResult_Click(object sender, EventArgs e)
-        {
-          
+        {       
             var birth = new DateTime(int.Parse(textBoxYear.Text), int.Parse(textBoxMonth.Text),
                 int.Parse(textBoxDay.Text));
 
