@@ -18,7 +18,8 @@ namespace Ecutbildning.CalculateDaysConsole
             Console.WriteLine("Insert day");
             var day = Console.ReadLine();
             var birth = new DateTime(int.Parse(year), int.Parse(month), int.Parse(day));
-            Console.WriteLine(host.CalculateAgeIntoDays(birth));
+            Console.WriteLine(host.
+                (birth));
 
             Console.ReadLine();
         }

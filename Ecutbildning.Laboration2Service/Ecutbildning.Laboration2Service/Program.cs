@@ -14,7 +14,7 @@ namespace Ecutbildning.Laboration2Service
     public interface IYearCalculator
     {
         [OperationContract]
-        int CalculateAgeIntoDays(DateTime date);
+        int CalculateBirthDateIntoYears(DateTime date);
     }
 
     [ServiceContract(Namespace = "http://Ecutbildning.Laboration2Service")]
@@ -50,7 +50,7 @@ namespace Ecutbildning.Laboration2Service
             throw new NotImplementedException();
         }
 
-        public int CalculateAgeIntoDays(DateTime date)
+        public int CalculateBirthDateIntoYears(DateTime date)
         {
             var yourDate = date.Year;
             var today = DateTime.Now.Year;
