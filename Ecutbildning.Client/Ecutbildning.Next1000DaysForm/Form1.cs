@@ -23,7 +23,7 @@ namespace Ecutbildning.Next1000DaysForm
                 int.Parse(textBoxDay.Text));
 
             var host = new Next1000DaysCalculatorClient();
-            labelResult.Text += host.CalculateNext1000Days(birth);
+            labelResult.Text = host.CalculateNext1000Days(birth);
         }
     }
 }

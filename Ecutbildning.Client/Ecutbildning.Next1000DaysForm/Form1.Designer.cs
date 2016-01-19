@@ -41,9 +41,8 @@
             this.labelResult.AutoSize = true;
             this.labelResult.Location = new System.Drawing.Point(44, 236);
             this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(248, 17);
+            this.labelResult.Size = new System.Drawing.Size(0, 17);
             this.labelResult.TabIndex = 11;
-            this.labelResult.Text = "Next time you will be even 1000 days: ";
             // 
             // buttonResult
             // 

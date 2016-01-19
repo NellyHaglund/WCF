@@ -51,8 +51,9 @@ namespace Ecutbildning.Laboration2Service
             var timeSpan = DateTime.Now - date;
             var modulo = (timeSpan.Days % 1000);
             var result = 1000 - modulo;
-
-            return result.ToString();
+            var yearToTurnEven1000 = DateTime.Now.AddDays(result).Year;  
+            var dateToTurnEven1000 = new DateTime(yearToTurnEven1000, date.Month, date.Day);
+            return $"{dateToTurnEven1000.ToShortDateString()} fyller du jämnt 1000-tal";
         }
 
         public int CalculateBirthDateIntoYears(DateTime date)
