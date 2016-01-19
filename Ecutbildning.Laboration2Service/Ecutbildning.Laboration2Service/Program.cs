@@ -36,13 +36,23 @@ namespace Ecutbildning.Laboration2Service
     {
         public float CalculateBMI(float weight, float height)
         {
-            var bmi = weight/(height*height);
+            var bmi = weight / (height * height);
             return bmi;
         }
 
         public string AmIStrong(string input)
         {
-            throw new NotImplementedException();
+            var kilo = input.Split(';')[0];
+            var gender = input.Split(';')[1];
+            switch (gender)
+            {
+                case "kvinna":
+                    return (int.Parse(kilo) > 50) ? "You are a strong woman!" : "You weak piece of shit";
+                case "man":
+                    return (int.Parse(kilo) > 100) ? "You are a strong man!" : "You weak piece of shit, you bastard";
+                default:
+                    return "Du är ingenting";
+            }
         }
 
         public string CalculateNext1000Days(DateTime date)
@@ -51,7 +61,7 @@ namespace Ecutbildning.Laboration2Service
             var timeSpan = DateTime.Now - date;
             var modulo = (timeSpan.Days % 1000);
             var result = 1000 - modulo;
-            var yearToTurnEven1000 = DateTime.Now.AddDays(result).Year;  
+            var yearToTurnEven1000 = DateTime.Now.AddDays(result).Year;
             var dateToTurnEven1000 = new DateTime(yearToTurnEven1000, date.Month, date.Day);
             return $"{dateToTurnEven1000.ToShortDateString()} fyller du jämnt 1000-tal";
         }
