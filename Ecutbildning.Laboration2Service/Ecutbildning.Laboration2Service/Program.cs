@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ecutbildning.Laboration2Service
 {
@@ -13,6 +9,7 @@ namespace Ecutbildning.Laboration2Service
         [OperationContract]
         float CalculateBMI(float weight, float height);
     }
+
     [ServiceContract(Namespace = "http://Ecutbildning.Laboration2Service")]
     public interface IYearCalculator
     {
@@ -39,13 +36,13 @@ namespace Ecutbildning.Laboration2Service
     {
         public float CalculateBMI(float weight, float height)
         {
-            var bmi = weight / (height * height);
+            var bmi = weight/(height*height);
             return bmi;
         }
 
-        public int CalculateAgeIntoDays(DateTime date)
+        public string AmIStrong(string input)
         {
-           return ((DateTime.Now.Year - date.Year) * 372 + (DateTime.Now.Month - date.Month) * 31 + (DateTime.Now.Day - date.Day)) / 372;
+            throw new NotImplementedException();
         }
 
         public string CalculateNext1000Days(DateTime date)
@@ -53,17 +50,18 @@ namespace Ecutbildning.Laboration2Service
             throw new NotImplementedException();
         }
 
-        public string AmIStrong(string input)
+        public int CalculateAgeIntoDays(DateTime date)
         {
-            throw new NotImplementedException();
+            var yourDate = date.Year;
+            var today = DateTime.Now.Year;
+            return today - yourDate;
         }
     }
 
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-
         }
     }
 }
