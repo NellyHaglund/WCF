@@ -16,15 +16,7 @@ namespace Ecutbildning.CalculateDaysForm
             var birth = new DateTime(int.Parse(textBoxYear.Text), int.Parse(textBoxMonth.Text),
                 int.Parse(textBoxDay.Text));
 
-            labelResult.Text += host.
-                
-                
-                
-                
-                
-                
-                
-                (birth);
+            labelResult.Text += host.CalculateBirthDateIntoYears(birth);
         }
     }
 }
