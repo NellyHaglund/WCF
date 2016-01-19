@@ -11,7 +11,7 @@ namespace Ecutbildning.BMIClientConsole
         static void Main(string[] args)
         {
             BMICalculatorClient host = new BMICalculatorClient();
-            Console.WriteLine("Insert you height: ");
+            Console.WriteLine("Insert you height (meters): ");
             var height = Console.ReadLine();
             Console.WriteLine("Insert your weight: ");
             var weight = Console.ReadLine();
