@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecutbildning.CalculateDaysF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecutbildning.CalculateDaysConsole", "Ecutbildning.CalculateDaysConsole\Ecutbildning.CalculateDaysConsole.csproj", "{6ED689EF-837F-49EE-BAF0-8E3D5DD144C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecubildning.Next1000DaysConsole", "Ecubildning.Next1000DaysConsole\Ecubildning.Next1000DaysConsole.csproj", "{73662276-6253-4715-8B96-8E38D6721C98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecutbildning.Next1000DaysForm", "Ecutbildning.Next1000DaysForm\Ecutbildning.Next1000DaysForm.csproj", "{A5E1EE93-BAEC-4B3C-B5B4-8711534B6D8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{6ED689EF-837F-49EE-BAF0-8E3D5DD144C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6ED689EF-837F-49EE-BAF0-8E3D5DD144C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6ED689EF-837F-49EE-BAF0-8E3D5DD144C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73662276-6253-4715-8B96-8E38D6721C98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73662276-6253-4715-8B96-8E38D6721C98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73662276-6253-4715-8B96-8E38D6721C98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73662276-6253-4715-8B96-8E38D6721C98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E1EE93-BAEC-4B3C-B5B4-8711534B6D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E1EE93-BAEC-4B3C-B5B4-8711534B6D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E1EE93-BAEC-4B3C-B5B4-8711534B6D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E1EE93-BAEC-4B3C-B5B4-8711534B6D8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
