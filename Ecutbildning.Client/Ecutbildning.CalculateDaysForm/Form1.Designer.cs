@@ -75,7 +75,7 @@
             this.buttonResult.Name = "buttonResult";
             this.buttonResult.Size = new System.Drawing.Size(227, 33);
             this.buttonResult.TabIndex = 4;
-            this.buttonResult.Text = "How many days old am I?";
+            this.buttonResult.Text = "How old am I?";
             this.buttonResult.UseVisualStyleBackColor = true;
             this.buttonResult.Click += new System.EventHandler(this.buttonResult_Click);
             // 
@@ -84,9 +84,9 @@
             this.labelResult.AutoSize = true;
             this.labelResult.Location = new System.Drawing.Point(93, 207);
             this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(90, 17);
+            this.labelResult.Size = new System.Drawing.Size(74, 17);
             this.labelResult.TabIndex = 5;
-            this.labelResult.Text = "Age in days: ";
+            this.labelResult.Text = "Your age: ";
             // 
             // Form1
             // 
