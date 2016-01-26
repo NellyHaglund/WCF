@@ -36,5 +36,24 @@ namespace EmployeeClient
             textBoxContry.Text = employee.Country;
 
         }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            if (host.State == CommunicationState.Faulted)
+            {
+                host = new EmployeeServiceClient();
+            }
+
+            var employee = new Employee
+            {
+                EmployeeID = int.Parse(textBoxId.Text),
+                FirstName = textBoxFirstname.Text,
+                LastName = textBoxLastName.Text,
+                Title = textBoxTitle.Text,
+                Country = textBoxContry.Text
+            };
+
+            host.SaveEmployee(employee);
+        }
     }
 }
