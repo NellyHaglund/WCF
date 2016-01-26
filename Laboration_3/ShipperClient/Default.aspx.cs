@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ShipperClient.NwService;
 
 namespace ShipperClient
 {
@@ -27,7 +28,11 @@ namespace ShipperClient
         protected void TextBoxPhone_TextChanged(object sender, EventArgs e)
         {
             var host = new ShipperServiceClient();
-
+            var shipper = new NorthwindService.Shipper();
+            shipper.ShipperID = int.Parse(TextBoxShipperId.Text);
+            shipper.CompanyName = TextBoxCompanyName.Text;
+            shipper.Phone = TextBoxPhone.Text;
+            host.SaveShipper(shipper);
         }
     }
 }
