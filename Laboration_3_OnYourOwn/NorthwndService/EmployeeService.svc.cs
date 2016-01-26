@@ -1,5 +1,4 @@
-﻿using System;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data.SqlClient;
 
 namespace NorthwndService
@@ -29,14 +28,30 @@ namespace NorthwndService
                     employee.Country = (string) reader["Country"];
                 }
                 connection.Close();
-                
             }
             return employee;
         }
 
         public void SaveEmployee(Employee employee)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                using (var command = connection.CreateCommand())
+                {
+                    command.Parameters.AddWithValue("@employeeID", employee.EmployeeID);
+                    command.Parameters.AddWithValue("@firstname", employee.FirstName);
+                    command.Parameters.AddWithValue("@lastname", employee.LastName);
+                    command.Parameters.AddWithValue("@title", employee.Title);
+                    command.Parameters.AddWithValue("@country", employee.Country);
+
+                    command.CommandText =
+                        "UPDATE Employees SET FirstName = @firstname, LastName = @lastname, Title = @title, Country = @country WHERE EmployeeID = @employeeId";
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
         }
     }
 }
