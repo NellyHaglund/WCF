@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindService", "NorthwindService\NorthwindService.csproj", "{762A59EA-80C9-4FD7-9025-43545253A36D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShipperClient", "ShipperClient\ShipperClient.csproj", "{9C9E8A4F-5BCD-4B4A-8259-3E617E1302A2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{762A59EA-80C9-4FD7-9025-43545253A36D} = {762A59EA-80C9-4FD7-9025-43545253A36D}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
