@@ -14,6 +14,7 @@ namespace NorthwndService
     // NOTE: In order to launch WCF Test Client for testing this service, please select EmployeeService.svc or EmployeeService.svc.cs at the Solution Explorer and start debugging.
     public class EmployeeService : IEmployeeService
     {
+        private string _connectionString = ConfigurationManager.ConnectionStrings["myDb"].ConnectionString;
         public Employee GetEmployeeById(int id)
         {
             throw new NotImplementedException();
