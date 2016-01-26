@@ -1,5 +1,4 @@
-﻿using System;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data.SqlClient;
 
 namespace NorthwindService
@@ -34,7 +33,22 @@ namespace NorthwindService
 
         public void SaveShipper(Shipper shipper)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(_connectionstring))
+            using (var command = connection.CreateCommand())
+            {
+                command.Parameters.AddWithValue("@companyName", shipper.CompanyName);
+                command.Parameters.AddWithValue("@phone", shipper.Phone);
+                command.Parameters.AddWithValue("@shipperID", shipper.ShipperID);
+
+                command.CommandText =
+                    "UPDATE Shippers SET CompanyName = @companyName, Phone = @phone Where ShipperID = @shipperID";
+
+                connection.Open();
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+            }
         }
     }
 }
