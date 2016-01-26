@@ -4,6 +4,9 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Data;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace NorthwndService
 {
@@ -11,8 +14,14 @@ namespace NorthwndService
     // NOTE: In order to launch WCF Test Client for testing this service, please select EmployeeService.svc or EmployeeService.svc.cs at the Solution Explorer and start debugging.
     public class EmployeeService : IEmployeeService
     {
-        public void DoWork()
+        public Employee GetEmployeeById(int id)
         {
+            throw new NotImplementedException();
+        }
+
+        public void SaveEmployee(Employee employee)
+        {
+            throw new NotImplementedException();
         }
     }
 }
