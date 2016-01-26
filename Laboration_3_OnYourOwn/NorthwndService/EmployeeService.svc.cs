@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.ServiceModel;
 
@@ -37,9 +38,9 @@ namespace NorthwndService
             {
                 throw new FaultException<SqlException>(exception.Detail, "Something went wrong");
             }
-            catch (FaultException exception)
+            catch (Exception exception)
             {
-                throw new FaultException(exception.Message);
+                throw new FaultException<Exception>(exception);
             }
         }
 
@@ -70,9 +71,9 @@ namespace NorthwndService
             {
                 throw new FaultException<SqlException>(exception.Detail, "Something went wrong");
             }
-            catch (FaultException exception)
+            catch (Exception exception)
             {
-                throw new FaultException(exception.Message);
+                throw new FaultException<Exception>(exception);
             }
         }
     }
