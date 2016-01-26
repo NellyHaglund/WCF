@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using System.Data;
-using System.
+
 
 namespace NorthwndService
 {
@@ -27,10 +27,10 @@ namespace NorthwndService
         public int EmployeeID { get; set; }
         [DataMember]
 
-        public string Firstname { get; set; }
+        public string FirstName { get; set; }
         [DataMember]
 
-        public string Lastname { get; set; }
+        public string LastName { get; set; }
         [DataMember]
 
         public string Title { get; set; }
