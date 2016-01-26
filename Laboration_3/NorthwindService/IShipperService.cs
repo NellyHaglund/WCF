@@ -14,4 +14,10 @@ namespace NorthwindService
         [OperationContract]
         void DoWork();
     }
+
+    [DataContract]
+    public class Shipper
+    {
+        
+    }
 }
