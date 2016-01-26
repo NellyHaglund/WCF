@@ -89,6 +89,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Styles\Default.css" />
     <Content Include="Web.config" />
     <None Include="Service References\NwService\ShipperService.wsdl" />
     <None Include="Service References\NwService\ShipperService.xsd">

@@ -13,5 +13,15 @@ namespace ShipperClient
         {
 
         }
+
+        protected void getShipperButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void TextBoxPhone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

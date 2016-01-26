@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="Styles/Default.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -17,24 +18,27 @@
             <h2>EDIT SHIPPER INFORMATION</h2>
             <label for="shipperCode">Enter Shipper Code:</label>
             <br/>
-            <input id="shipperCode"/>
+            &nbsp;<asp:TextBox ID="TextBoxShipperCode" runat="server"></asp:TextBox>
             <br/>
-            <button id="getShipperButton">Get Shipper</button>
+            <asp:Button ID="getShipperButton" runat="server" Text="Get Shipper" OnClick="getShipperButton_Click" />
             <br/>
             <label>EDIT SHIPPER DATA</label>
             <label for="shipperID">Shipper Id:</label>
             <br/>
-            <input id="shipperID"></input>
+            </input>
+            &nbsp;<asp:TextBox ID="TextBoxShipperId" runat="server"></asp:TextBox>
             <br/>      
              <label for="companyName">Company name:</label>
             <br/>
-            <input id="companyName"></input>
+            </input>
+            &nbsp;<asp:TextBox ID="TextBoxCompanyName" runat="server"></asp:TextBox>
             <br/>
             <label for="phone">Phone:</label>
             <br/>
-            <input id="phone"/>
+            &nbsp;<asp:TextBox ID="TextBoxPhone" runat="server" OnTextChanged="TextBoxPhone_TextChanged"></asp:TextBox>
             <br/>
-            <button id="save">Save</button>
+            <button id="save"></button>
+            <asp:Button ID="ButtonSave" runat="server" Text="Save" />
         </div>
     </form>
 </body>
