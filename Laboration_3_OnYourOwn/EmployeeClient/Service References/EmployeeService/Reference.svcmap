@@ -28,6 +28,9 @@
     <MetadataFile FileName="EmployeeService1.xsd" MetadataType="Schema" ID="5d1897d1-7d0f-436e-b943-7dd3bfe8b533" SourceId="1" SourceUrl="http://localhost:5385/EmployeeService.svc?xsd=xsd2" />
     <MetadataFile FileName="EmployeeService2.xsd" MetadataType="Schema" ID="3851ba58-21fb-47c9-9c31-b536ca2df1f7" SourceId="1" SourceUrl="http://localhost:5385/EmployeeService.svc?xsd=xsd1" />
     <MetadataFile FileName="EmployeeService3.xsd" MetadataType="Schema" ID="d8b53918-61e1-48f9-b97a-605fb5e152a4" SourceId="1" SourceUrl="http://localhost:5385/EmployeeService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EmployeeService4.xsd" MetadataType="Schema" ID="af00f0d5-7dee-4205-a643-ae9057c97a1c" SourceId="1" SourceUrl="http://localhost:5385/EmployeeService.svc?xsd=xsd6" />
+    <MetadataFile FileName="EmployeeService41.xsd" MetadataType="Schema" ID="d6b5e19d-a012-4b9d-a36d-d53c8e14cfef" SourceId="1" SourceUrl="http://localhost:5385/EmployeeService.svc?xsd=xsd5" />
+    <MetadataFile FileName="EmployeeService42.xsd" MetadataType="Schema" ID="a42fc8bc-6b79-40d2-8d0b-8aa10b570baf" SourceId="1" SourceUrl="http://localhost:5385/EmployeeService.svc?xsd=xsd4" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

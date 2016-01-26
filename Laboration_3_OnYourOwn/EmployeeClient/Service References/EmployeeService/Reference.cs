@@ -128,6 +128,7 @@ namespace EmployeeClient.EmployeeService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetEmployeeById", ReplyAction="http://tempuri.org/IEmployeeService/GetEmployeeByIdResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ApplicationException), Action="http://tempuri.org/IEmployeeService/GetEmployeeByIdApplicationExceptionFault", Name="ApplicationException", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Data.SqlClient.SqlException), Action="http://tempuri.org/IEmployeeService/GetEmployeeByIdSqlExceptionFault", Name="SqlException", Namespace="http://schemas.datacontract.org/2004/07/System.Data.SqlClient")]
         EmployeeClient.EmployeeService.Employee GetEmployeeById(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetEmployeeById", ReplyAction="http://tempuri.org/IEmployeeService/GetEmployeeByIdResponse")]
@@ -135,6 +136,7 @@ namespace EmployeeClient.EmployeeService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/SaveEmployee", ReplyAction="http://tempuri.org/IEmployeeService/SaveEmployeeResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ApplicationException), Action="http://tempuri.org/IEmployeeService/SaveEmployeeApplicationExceptionFault", Name="ApplicationException", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Data.SqlClient.SqlException), Action="http://tempuri.org/IEmployeeService/SaveEmployeeSqlExceptionFault", Name="SqlException", Namespace="http://schemas.datacontract.org/2004/07/System.Data.SqlClient")]
         void SaveEmployee(EmployeeClient.EmployeeService.Employee employee);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/SaveEmployee", ReplyAction="http://tempuri.org/IEmployeeService/SaveEmployeeResponse")]

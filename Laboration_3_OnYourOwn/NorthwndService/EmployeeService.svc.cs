@@ -33,6 +33,10 @@ namespace NorthwndService
                 }
                 return employee;
             }
+            catch (FaultException<SqlException> exception)
+            {
+                throw new FaultException<SqlException>(exception.Detail, "Something went wrong");
+            }
             catch (FaultException exception)
             {
                 throw new FaultException(exception.Message);
@@ -62,9 +66,13 @@ namespace NorthwndService
                     }
                 }
             }
+            catch (FaultException<SqlException> exception)
+            {
+                throw new FaultException<SqlException>(exception.Detail, "Something went wrong");
+            }
             catch (FaultException exception)
             {
-                throw new FaultException(exception.Reason);
+                throw new FaultException(exception.Message);
             }
         }
     }

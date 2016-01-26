@@ -98,6 +98,15 @@
     <None Include="Service References\EmployeeService\EmployeeService3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\EmployeeService\EmployeeService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmployeeService\EmployeeService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmployeeService\EmployeeService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

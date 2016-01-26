@@ -44,6 +44,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.buttonGetEmployee = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.labelResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxId
@@ -180,11 +181,20 @@
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
+            // labelResult
+            // 
+            this.labelResult.AutoSize = true;
+            this.labelResult.Location = new System.Drawing.Point(704, 426);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(0, 17);
+            this.labelResult.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 548);
+            this.Controls.Add(this.labelResult);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonGetEmployee);
             this.Controls.Add(this.label8);
@@ -226,6 +236,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button buttonGetEmployee;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Label labelResult;
     }
 }
 

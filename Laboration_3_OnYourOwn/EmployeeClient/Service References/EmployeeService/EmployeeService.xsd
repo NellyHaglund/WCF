@@ -14,4 +14,10 @@
     <xs:attribute ref="ser:FactoryType" />
   </xs:complexType>
   <xs:element name="Exception" nillable="true" type="tns:Exception" />
+  <xs:complexType name="SystemException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Exception" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemException" nillable="true" type="tns:SystemException" />
 </xs:schema>
