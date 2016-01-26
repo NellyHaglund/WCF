@@ -4,6 +4,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Data;
+using System.
 
 namespace NorthwndService
 {
@@ -12,6 +14,28 @@ namespace NorthwndService
     public interface IEmployeeService
     {
         [OperationContract]
-        void DoWork();
+        Employee GetEmployeeById(int id);
+
+        [OperationContract]
+        void SaveEmployee(Employee employee);
+    }
+
+    [DataContract]
+    public class Employee
+    {
+        [DataMember]
+        public int EmployeeID { get; set; }
+        [DataMember]
+
+        public string Firstname { get; set; }
+        [DataMember]
+
+        public string Lastname { get; set; }
+        [DataMember]
+
+        public string Title { get; set; }
+        [DataMember]
+
+        public string Country { get; set; }
     }
 }
