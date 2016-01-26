@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using System.Data;
@@ -9,33 +8,16 @@ using System.Data;
 
 namespace NorthwndService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IEmployeeService" in both code and config file together.
     [ServiceContract]
     public interface IEmployeeService
     {
         [OperationContract]
+        [FaultContract(typeof(ApplicationException))]
         Employee GetEmployeeById(int id);
 
         [OperationContract]
+        [FaultContract(typeof(ApplicationException))]
+
         void SaveEmployee(Employee employee);
-    }
-
-    [DataContract]
-    public class Employee
-    {
-        [DataMember]
-        public int EmployeeID { get; set; }
-        [DataMember]
-
-        public string FirstName { get; set; }
-        [DataMember]
-
-        public string LastName { get; set; }
-        [DataMember]
-
-        public string Title { get; set; }
-        [DataMember]
-
-        public string Country { get; set; }
     }
 }
