@@ -14,6 +14,9 @@ namespace NorthwindService
     // NOTE: In order to launch WCF Test Client for testing this service, please select ShipperService.svc or ShipperService.svc.cs at the Solution Explorer and start debugging.
     public class ShipperService : IShipperService
     {
+        string _connectionstring = ConfigurationManager.
+    ConnectionStrings["NORTHWND"].ConnectionString;
+        
         public Shipper GetShipperById(int id)
         {
             throw new NotImplementedException();
