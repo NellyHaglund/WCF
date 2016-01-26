@@ -168,6 +168,7 @@
             this.buttonGetEmployee.TabIndex = 14;
             this.buttonGetEmployee.Text = "Get Employee";
             this.buttonGetEmployee.UseVisualStyleBackColor = true;
+            this.buttonGetEmployee.Click += new System.EventHandler(this.buttonGetEmployee_Click);
             // 
             // buttonSave
             // 
