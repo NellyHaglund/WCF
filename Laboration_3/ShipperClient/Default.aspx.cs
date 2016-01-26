@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using ShipperClient.NwService;
+using NorthwindService;
 
 namespace ShipperClient
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class Default : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void getShipperButton_Click(object sender, EventArgs e)
@@ -27,11 +22,18 @@ namespace ShipperClient
 
         protected void TextBoxPhone_TextChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        protected void ButtonSave_Click(object sender, EventArgs e)
+        {
             var host = new ShipperServiceClient();
-            var shipper = new NorthwindService.Shipper();
-            shipper.ShipperID = int.Parse(TextBoxShipperId.Text);
-            shipper.CompanyName = TextBoxCompanyName.Text;
-            shipper.Phone = TextBoxPhone.Text;
+            var shipper = new Shipper
+            {
+                ShipperID = int.Parse(TextBoxShipperId.Text),
+                CompanyName = TextBoxCompanyName.Text,
+                Phone = TextBoxPhone.Text
+            };
             host.SaveShipper(shipper);
         }
     }

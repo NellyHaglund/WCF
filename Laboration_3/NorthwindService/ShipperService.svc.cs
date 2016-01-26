@@ -13,7 +13,7 @@ namespace NorthwindService
         public Shipper GetShipperById(int id)
         {
             var shipper = new Shipper();
-            var queryString = "SELECT ShipperID, CompanyName, Phone FROM dbo.Shippers WHERE ShipperID =" + id;
+            var queryString = "SELECT * FROM dbo.Shippers WHERE ShipperID =" + id;
             using (var connection = new SqlConnection(_connectionstring))
             {
                 var command = new SqlCommand(queryString, connection);
@@ -41,13 +41,11 @@ namespace NorthwindService
                 command.Parameters.AddWithValue("@shipperID", shipper.ShipperID);
 
                 command.CommandText =
-                    "UPDATE Shippers SET CompanyName = @companyName, Phone = @phone Where ShipperID = @shipperID";
+                    "UPDATE Shippers SET CompanyName = @companyName, Phone = @phone WHERE ShipperID = @shipperID";
 
                 connection.Open();
 
                 command.ExecuteNonQuery();
-
-                connection.Close();
             }
         }
     }
