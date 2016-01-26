@@ -12,12 +12,22 @@ namespace NorthwindService
     public interface IShipperService
     {
         [OperationContract]
-        void DoWork();
+        Shipper GetShipperById(int id);
+
+        [OperationContract]
+        void SaveShipper(Shipper shipper);
     }
 
     [DataContract]
     public class Shipper
     {
-        
+        [DataMember]
+        public int ShipperID { get; set; }
+        [DataMember]
+
+        public string CompanyName { get; set; }
+        [DataMember]
+
+        public string Phone { get; set; }
     }
 }

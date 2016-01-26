@@ -16,10 +16,26 @@ namespace NorthwindService
     {
         string _connectionstring = ConfigurationManager.
     ConnectionStrings["NORTHWND"].ConnectionString;
-        
+
         public Shipper GetShipperById(int id)
         {
-            throw new NotImplementedException();
+            var shipper = new Shipper();
+            string queryString = "SELECT ShipperID, CompanyName, Phone WHERE ShipperID =" + id;
+            using (SqlConnection connection = new SqlConnection(_connectionstring))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+             
+                while (reader.Read())
+                {
+                    shipper.ShipperID = (int)reader["ShipperID"];
+                    shipper.CompanyName = (string)reader["CompanyName"];
+                    shipper.Phone = (string)reader["Phone"];
+                }
+                reader.Close();
+            }
+            return shipper;
         }
 
         public void SaveShipper(Shipper shipper)
